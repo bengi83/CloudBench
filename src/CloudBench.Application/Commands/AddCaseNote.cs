@@ -1,3 +1,5 @@
-﻿namespace CloudBench.Application.Commands;
+﻿using CloudBench.Shared.Abstractions.Commands;
 
-public record AddCaseNote(int CaseId, int AuthorId, bool IsPublic, string Content);
+namespace CloudBench.Application.Commands;
+
+public record AddCaseNote(int CaseId, int AuthorId, bool IsPublic, string Content) : ICommand;

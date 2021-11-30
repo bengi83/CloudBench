@@ -4,18 +4,18 @@ namespace CloudBench.Domain.ValueObjects;
 
 public class CaseId
 {
-  public Guid Value { get; }
+  public int Value { get; }
 
-  public CaseId(Guid value)
+  public CaseId(int value)
   {
-    if (value == Guid.Empty)
-      throw new EmptyCaseIdException();
+    if (value <= 0)
+      throw new InvalidCaseIdException();
     Value = value;
   }
 
-  public static implicit operator Guid(CaseId id)
+  public static implicit operator int(CaseId id)
     => id.Value;
 
-  public static implicit operator CaseId(Guid id)
+  public static implicit operator CaseId(int id)
     => new(id);
 }

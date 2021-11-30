@@ -13,7 +13,7 @@ public class Case
   private CaseData _data;
   private DateTime _createdDate;
 
-  private readonly List<CaseNote> _notes = new();
+  private readonly LinkedList<CaseNote> _notes = new();
 
   internal Case(CaseId id, ProcessId processId, ProcessState state, PersonId requester, CaseData data,
     DateTime createdDate)
@@ -40,6 +40,24 @@ public class Case
 
   public void AddNote(CaseNote note)
   {
-    _notes.Add(note);
+    _notes.AddLast(note);
+  }
+
+  public void DeleteNote(CaseNoteId noteId)
+  {
+    var note = GetCaseNote(noteId);
+    var deletedNote = note with { IsDeleted = true };
+
+    _notes.Find(note).Value = deletedNote;
+  }
+
+  public CaseNote GetCaseNote(CaseNoteId noteId)
+  {
+    var note = _notes.SingleOrDefault(n => n.Id == noteId);
+
+    if (note is null)
+      throw new CaseNoteNotFoundException(noteId.Value);
+
+    return note;
   }
 }

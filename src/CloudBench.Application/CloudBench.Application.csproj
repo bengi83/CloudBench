@@ -7,11 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\CloudBench.Domain\CloudBench.Domain.csproj" />
       <ProjectReference Include="..\CloudBench.Shared.Abstractions\CloudBench.Shared.Abstractions.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Commands\Handlers" />
     </ItemGroup>
 
 </Project>
