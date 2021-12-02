@@ -14,7 +14,7 @@ internal static class Extensions
     services.AddScoped<ICaseRepository, SqlCaseRepository>();
     
     var connectionString = configuration.GetConnectionString("CloudBenchConnection");
-    
+    services.AddDbContext<ReadDbContext>(ctx => ctx.UseSqlServer(connectionString));
     services.AddDbContext<WriteDbContext>(ctx => ctx.UseSqlServer(connectionString));
 
     return services;
