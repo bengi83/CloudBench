@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudBench.Shared.Abstracti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudBench.Infrastructure", "src\CloudBench.Infrastructure\CloudBench.Infrastructure.csproj", "{FB0519B7-9370-4301-845A-75064B3C9C5D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudBench.Api", "src\CloudBench.Api\CloudBench.Api.csproj", "{6D76B6F2-0DBF-417B-B54B-C527B5337DAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{FB0519B7-9370-4301-845A-75064B3C9C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB0519B7-9370-4301-845A-75064B3C9C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB0519B7-9370-4301-845A-75064B3C9C5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D76B6F2-0DBF-417B-B54B-C527B5337DAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D76B6F2-0DBF-417B-B54B-C527B5337DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D76B6F2-0DBF-417B-B54B-C527B5337DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D76B6F2-0DBF-417B-B54B-C527B5337DAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{73A941C8-EB82-4C18-BC26-76FE2FA6A91B} = {8FDF8E0C-9C18-452C-9D82-A0D56ABC9841}
